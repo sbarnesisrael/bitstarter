@@ -6,8 +6,9 @@ app.get('/', function(request, response) {
 //  response.send('Hello World2!');
     var fs = require('fs');
     var file = './index.html';
-    var buffer = new Buffer(fs.readFileSync(file), 'utf-8');
-    buffer.toString("utf-8");
+    var buffer = new Buffer(512);
+    var buff = buf.write(fs.readFileSync(file));
+    buf.toString("utf-8");
 });
 
 var port = process.env.PORT || 5000;
