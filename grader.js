@@ -42,7 +42,7 @@ var restlerURL = function(url) {
     restler.get(url).on('complete', function(result) {
 	return result;
     }
-};
+});
 
 var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
