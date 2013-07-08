@@ -42,7 +42,7 @@ var restlerURL = function(url) {
     restler.get(url).on('complete', function(result) {
 	return result;
     }
-});
+)};
 
 var cheerioHtmlFile = function(htmlfile) {
     return cheerio.load(fs.readFileSync(htmlfile));
@@ -76,7 +76,7 @@ if(require.main == module) {
         .option('-u, --url <url address>', 'URL to index.html', clone(restlerURL), URL_DEFAULT)
         .parse(process.argv);
     var checkJson = checkHtmlFile(program.file, program.checks);
-    var outJson = JSON.stringifycheckJson, null, 4);
+    var outJson = JSON.stringify(checkJson, null, 4);
     console.log(outJson);
 } else {
     exports.checkHtmlFile = checkHtmlFile;
